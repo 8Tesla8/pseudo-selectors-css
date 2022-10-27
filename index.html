@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIve server</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <h1 id="list">pseudo selectors css</h1>
+
+    <div class="short-list">
+        <h2>Short list</h2>
+
+        <ul>
+            <li><a href="#start">+ > [] ~</a></li>
+            <li><a href="#focus">:focus</a></li>
+            <li><a href="#hover">:hover</a></li>
+            <li><a href="#active">:active</a></li>
+            <li><a href="#child">child</a></li>
+            <li><a href="#has">:has</a></li>
+            <li><a href="#is">:is</a></li>
+            <li><a href="#not">:not</a></li>
+            <li><a href="#before-after">::before ::after</a></li>
+        </ul>
+
+    </div>
+    <br>
+
+    <div id="start" class="start">
+        <h2>+ > [] ~</h2>
+
+        <div>
+            <p>div is a direct parent of p | .start div > p</p>
+
+            <div>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <p>p is preceded by a ul with same parent |/start ul ~ p</p>
+            </div>
+
+
+            <p>div is a direct parent of | p .start div > p</p>
+        </div>
+
+        <span>span is right after div | .start div + span</span>
+
+        <div class="form">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="submit" value="Submit" />
+        </div>
+    </div>
+    <br>
+
+
+    <div id="focus" class="focus">
+        <h2>:focus</h2>
+        <a href="#list">List pseudo selectors css</a>
+        Click on input and button
+
+        <form>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="submit" value="Submit" />
+        </form>
+
+    </div>
+    <br>
+
+
+    <div id="hover" class="hover">
+        <h2>:hover</h2>
+        <a href="#list">List pseudo selectors css</a>
+        <div>Mouse over</div>
+    </div>
+    <br>
+
+
+    <div id="active" class="active">
+        <h2>:active</h2>
+        <a href="#list">List pseudo selectors css</a>
+        <p>Click here</p>
+
+        <div>Click here</div>
+    </div>
+    <br>
+
+
+    <div id="child" class="child">
+        <h2>Child</h2>
+        <a href="#list">List pseudo selectors css</a>
+        odd even
+        <ul class="odd-even">
+            <li>Item 1 odd</li>
+            <li>Item 2 even</li>
+            <li>Item 3 odd</li>
+            <li>Item 4 even</li>
+            <li>Item 5 odd</li>
+            <li>Item 6 even</li>
+        </ul>
+
+        position
+        <ul class="position">
+            <li>Item 1 first child</li>
+            <li>Item 2</li>
+            <li>Item 3 every 3rd</li>
+            <li>Item 4</li>
+            <li>Item 5 only 5</li>
+            <li>Item 6 every 3rd</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9 every 3rd</li>
+            <li>Item 10</li>
+            <li>Item 11 every 5rd start from 11</li>
+            <li>Item 12 every 3rd</li>
+            <li>Item 13</li>
+            <li>Item 14</li>
+            <li>Item 15 every 3rd</li>
+            <li>Item 16 every 5rd start from 11</li>
+            <li>Item 17</li>
+            <li>Item 18 every 3rd</li>
+            <li>Item 19</li>
+            <li>Item 20 last child</li>
+        </ul>
+    </div>
+    <br>
+
+
+    <div id="is" class="is">
+        <h2>:is</h2>
+        <a href="#list">List pseudo selectors css</a>
+        <div> Some text in div</div>
+        <p> Some text in p</p>
+    </div>
+    <br>
+
+
+    <div id="has" class="has">
+        <h2>:has</h2>
+        <a href="#list">List pseudo selectors css</a>
+        By tag
+        <ul class="tag">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        By class
+        <div class="by-class">
+            <p>Some text in p</p>
+            <div class="has-class">Some text in div</div>
+        </div>
+
+        List 
+        <ul class="list">
+            <li>Item 1 odd</li>
+            <li>Item 2
+                <p>has p</p>
+            </li>
+            <li>Item 3 odd
+                <span>has span</span>
+            </li>
+            <li>Item 4 even</li>
+            <li>Item 5 odd
+                <p>has p</p>
+            </li>
+            <li>Item 6 even</li>
+        </ul>
+    </div>
+    <br>
+
+
+    <div id="not" class="not">
+        <h2>:not</h2>
+        <a href="#list">List pseudo selectors css</a>
+        By class
+        <ul>
+            <li>Item 1</li>
+            <li class="other">Item 2 other</li>
+            <li>Item 3</li>
+        </ul>
+
+        By tag
+        <div>
+            <p>Some text in p</p>
+            <div>Some text in div</div>
+        </div>
+    </div>
+    <br>
+
+
+    <div id="before-after" class="before-after">
+        <h2>::before ::after</h2>
+        <a href="#list">List pseudo selectors css</a>
+
+        <div class="before">
+            <label class="required" for="name">Name before</label>
+            <input type="text" />
+        </div>
+
+        <div class="after">
+            <label class="required" for="name">Name after</label>
+            <input type="text" />
+        </div>
+
+    </div>
+    <br>
+
+</body>
+
+</html>
